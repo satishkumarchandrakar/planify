@@ -8,6 +8,8 @@
   - Stats of all the project
   
 ### Design level Hierarchy
-├── _Project
-|   ├── Phase
-|   |   ├── Task
+```
++-- Project
+|   +-- Phase
+|   |   +-- Task
+```
