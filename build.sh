@@ -5,12 +5,21 @@ sudo apt-get install openjdk-8-jdk
 
 #moving java to package repo
 mkdir -p tools/java
-cp /usr/lib/jvm/java-1.8.0-openjdk-amd64 ./tools/java
+cd /usr/lib/jvm/
+
+#replace the destination path to your Project location
+cp -r ./java-8-openjdk-amd64/ ~/workTrail/planify/tools/java/
 
 #downloading typesafe activator
 mkdir -p tools/typesafe
-wget -O ./tools/typesafe https://downloads.typesafe.com/typesafe-activator/1.3.7/typesafe-activator-1.3.7.zip
-unzip ./tools/typesafe/typesafe-activator-1.3.7.zip -d ./tools/typesafe/
-export PATH=./tools/typesafe/activator-dist-1.3.7/:$PATH
+#wget https://downloads.typesafe.com/typesafe-activator/1.3.7/typesafe-activator-1.3.7.zip
+cp -r ./typesafe-activator-1.3.7.zip ./tools/typesafe
+rm -rf ./typesafe-activator-1.3.7.zip
+cd ./tools/typesafe
+unzip ./typesafe-activator-1.3.7.zip
+export PATH=./activator-dist-1.3.7/:$PATH
+rm -rf ./typesafe-activator-1.3.7.zip
 
+#starting the application
+cd ../../
 ./start.sh
