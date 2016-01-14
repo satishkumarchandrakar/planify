@@ -10,6 +10,7 @@ cd /usr/lib/jvm/
 #replace the destination path to your Project location
 cp -r ./java-8-openjdk-amd64/ ~/workTrail/planify/tools/java/
 
+cd ~/workTrail/planify
 #downloading typesafe activator
 mkdir -p tools/typesafe
 #wget https://downloads.typesafe.com/typesafe-activator/1.3.7/typesafe-activator-1.3.7.zip
